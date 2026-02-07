@@ -1,0 +1,8 @@
+Invoke a lambda function:
+using version:
+aws lambda invoke --function-name rds-proxy-inside-vpc --qualifier 2 response.json && cat response.json
+using alias:
+aws lambda invoke --function-name rds-proxy-inside-vpc --qualifier uat response.json && cat response.json
+
+Update a lambda function:
+aws lambda update-function-code --function-name rds-proxy-inside-vpc --zip-file fileb://./deployment.zip
